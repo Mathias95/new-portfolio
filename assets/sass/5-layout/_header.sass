@@ -1,0 +1,27 @@
+.header
+	min-height: 6rem
+	display: flex
+	align-items: center
+
+	@media #{$md-bp}
+		min-height: 8rem
+
+	&__wrapper
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	&__logo-link
+		text-decoration: none
+
+	&__menu-button
+		background-color: transparent
+		border: 0
+		display: flex
+		align-items: center
+		cursor: pointer
+
+	&__menu-text
+		color: $white-color
+		font-size: 1.6rem
+		text-transform: uppercase
