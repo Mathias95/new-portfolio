@@ -1,19 +1,42 @@
 .banner
+	position: relative
 	height: calc(100vh - 6rem)
 	display: flex
 	align-items: flex-end
+	background-image: linear-gradient(180deg, rgba(0, 0, 0, .01), #0E0E11), url(~assets/images/banner-img.jpg)
+	background-position: 0px 0px, 50% 50%
+	background-size: auto, cover
+	background-repeat: repeat, no-repeat
 
 	@media #{$md-bp}
 		height: calc(100vh - 8rem)
 		align-items: center
 
-	&__wrapper
-		display: flex
-		flex-direction: column
-		margin-bottom: 14rem
+	&__container
+		z-index: 1
+
+	&__col
+		width: 100%
+		padding-right: 1.5rem
+		padding-left: 1.5rem
+		flex-basis: 0
+		flex-grow: 1
+		max-width: 100%
+		
+		@media #{$xl-bp}
+			display: flex
+			align-items: center
+			flex-direction: row-reverse
+			justify-content: flex-end
+	
+	&__text-wrapper
+		margin-bottom: 6rem
 
 		@media #{$md-bp}
 			margin-bottom: 0rem
+
+		@media #{$xl-bp}
+			margin-left: 3rem
 
 	&__title
 		font-size: 3.2rem
@@ -23,12 +46,11 @@
 		@media #{$md-bp}
 			font-size: 4.8rem
 			line-height: 5.8rem
-			margin-bottom: 4rem
+			margin-bottom: 3rem
 
 		@media #{$xl-bp}
 			font-size: 5.2rem
 			line-height: 7rem
-			margin-bottom: 5rem
 
 		&--red
 			color: $primary-color
@@ -36,6 +58,35 @@
 	&__subtitle
 		font-size: 1.8rem
 		color: $grey-dark-2-color
+		font-weight: $weight-normal
 		
 		@media #{$md-bp}
 			font-size: 2.2rem
+
+	&__profile-img
+		background: url(~assets/images/bg-profile-image.png) no-repeat
+		background-size: auto 100%
+		background-position: top 0 center
+		position: absolute
+		display: block
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 100%
+		max-height: 55rem
+
+		@media #{$sm-bp}
+			background-position: bottom 0 right -6rem
+
+		@media #{$md-bp}
+			min-height: 80.5rem
+			background-position: bottom 0 right -12rem
+
+		@media #{$lg-bp}
+			background-position: bottom 0 right -6rem
+
+		@media #{$xxl-bp}
+			background-position: bottom 0 right 28.5rem
+
+		@media (-webkit-min-device-pixel-ratio: 2) and (min-height: 620px) and (min-width: 768px), (min-height: 620px) and (min-resolution: 192dpi) and (min-width: 768px)
+			background-position: bottom -22rem right -6rem

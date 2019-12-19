@@ -1,0 +1,66 @@
+.scroll
+	margin-bottom: 2.5rem
+
+	@media screen and (min-width:768px) and (max-width:1199px)
+		position: absolute
+		right: 0
+		bottom: 0
+		left: 0
+		margin-bottom: 5rem
+
+	@media #{$xl-bp}
+		margin-bottom: 0rem
+		display: flex
+		align-items: center
+		flex-direction: column
+		flex-grow: 0
+		flex-shrink: 1
+		flex-basis: auto
+
+	&__indicator-wrapper
+		display: none
+		
+		@media #{$xl-bp}
+			display: flex
+			flex-direction: column
+			align-items: center
+
+	&__bar
+		@media #{$xl-bp}
+			width: .2rem
+			height: 60vh
+			background-color: #46454D
+
+	&__dots
+		margin-top: .8rem
+		display: flex
+		flex-direction: column
+
+	&__dot
+		height: .4rem
+		width: .4rem
+		background-color: #46454D
+		border-radius: 100%
+		&:not(:first-child)
+			margin-top: .5rem
+
+	&__button
+		background-color: $trans-color
+		border: none
+		font-weight: $weight-medium
+		margin: 0 auto
+		display: flex
+		flex-direction: column
+		align-items: center
+		cursor: pointer
+
+		@media #{$xl-bp}
+			margin-top: 2rem
+
+	&__text
+		color: $white-color
+		font-size: 1.2rem
+		margin-bottom: 1rem
+
+		@media #{$md-bp}
+			font-size: 1.5rem
