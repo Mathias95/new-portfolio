@@ -1,23 +1,23 @@
 <template>
-  <div>
-    <ul>
-      <li>
-        <nuxt-link to="/">
-          Mail icon
+  <div class="social">
+    <ul class="social__list">
+      <li class="social__item">
+        <nuxt-link to="/" class="social__link trans-fast">
+          Mail
         </nuxt-link>
       </li>
-      <li>
-        <nuxt-link to="/">
-          Github icon
+      <li class="social__item">
+        <nuxt-link to="/" class="social__link trans-fast">
+          Github
         </nuxt-link>
       </li>
-      <li>
-        <nuxt-link to="/">
-          Linkedin icon
+      <li class="social__item">
+        <nuxt-link to="/" class="social__link trans-fast">
+          Linkedin
         </nuxt-link>
       </li>
-      <li>
-        <nuxt-link to="/">
+      <li class="social__item">
+        <nuxt-link to="/" class="social__link trans-fast">
           Behance
         </nuxt-link>
       </li>
@@ -28,5 +28,3 @@
 <script>
 export default {}
 </script>
-
-<style></style>

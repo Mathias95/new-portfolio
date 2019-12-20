@@ -1,0 +1,26 @@
+.social
+
+	&__list
+		list-style-type: none
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-wrap: wrap
+
+	&__item
+		&:not(:last-child)
+			margin-right: 7rem
+
+	&__link
+		color: $white-opc-75-color
+		text-decoration: none
+		font-size: 1.6rem
+
+		&:hover
+			color: $primary-color
+
+		@media #{$md-bp}
+			font-size: 1.8rem
+
+		@media #{$xl-bp}
+			font-size: 2rem
