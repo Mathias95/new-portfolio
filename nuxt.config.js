@@ -23,9 +23,7 @@ export default {
   /*
    ** Global CSS
    */
-	css: [
-		'@/assets/sass/main.sass'
-	],
+  css: ['@/assets/sass/main.sass'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -35,6 +33,21 @@ export default {
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
+    [
+      'nuxt-fontawesome',
+      {
+        imports: [
+          {
+            set: '@fortawesome/free-solid-svg-icons',
+            icons: ['fas']
+          },
+          {
+            set: '@fortawesome/free-brands-svg-icons',
+            icons: ['fab']
+          }
+        ]
+      }
+    ],
     '@nuxtjs/axios',
     '@nuxtjs/eslint-module'
   ],

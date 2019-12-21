@@ -1,0 +1,20 @@
+%title
+	font-weight: $weight-normal
+
+.title-2
+	@extend %title
+	font-size: 4rem
+	line-height: 1.25
+	font-weight: $weight-bold
+
+	@media #{$md-bp}
+		font-size: 5.2rem
+		line-height: 1.2
+
+%text
+	font-size: 1.6rem
+	line-height: 1.9
+	font-weight: $weight-normal
+
+.main-text
+	@extend %text
